@@ -1,0 +1,101 @@
+azure boards
+
+which is used in a project to
+1 track the work with kanban boards
+2 work with backlog
+3 team dashbaord
+4 reporting
+
+azure board provides drag and drop featute toupdate kanban board
+
+fully compatible with scrum
+
+usefull: managing and tracking work
+it provides the clear pic of work 
+give accessof board to stakeholdr allow him to see the progress
+managing srcun spring 
+product backlog
+different types or reports
+
+azure board types
+while creating new project 4 type of work item process
+
+type of board depends on these work item process
+basic is bydefault
+
+work item
+is a unit small or large of work
+characteristics
+titlw
+description
+assignto
+completed by
+etc
+
+ex:
+epic userstory bug improvement etc
+
+work item in azure boards with basic process
+
+there are three work items
+
+epic issue task
+
+basic workflow
+
+todo--inprogress --- done
+
+ creat the title is 255 characteristics or less
+ 
+ assign--- responsible for performing work
+ state--- represents the current state---
+ 
+ reason--- reason for state change
+ 
+ area--- represents the area path associated with the product or team
+ iteration-- represents the sprint or the iteration in which the work is to be completed
+ description-- details of the work items
+ effort--- relative estimate of time required to complete a work flow
+ 
+ discussion--- fied  used for comment to give/ask information or to start discussion regarding work items
+ 
+ 
+ priority
+ 
+ 1. product cannot ship without the sccessful resolution of the work item,
+ and it should be addressd as soon as possible
+ 
+ 2.product cannot ship without the succesful resolution of the work item,
+ but it does not need to be address immediately
+ 
+ 3. resolution of the work item is optional based on resources ,time and risk
+ 
+ 4.resolution of the work item is not required
+ 
+ 
+ backlog
+ 
+ backlog is a collection of work items which will be used for future development
+  2 types of 
+  
+  product backlog
+  sprint backlog
+  product backlog-- is an orderd list of everythin that is known to be needed in the product
+  sprint backlog-- is the collection of work items which are in todo state
+  
+  benefits
+  
+  quickly define the task (user story,bug,productbacklog etc)
+  managing priority
+  add details and estimate to the backlog items in advance
+  quickly assign work item to team members
+  
+ group work items in a hirachy
+what can be delivered within sprint
+save time sprint planning
+
+how to creat the backlog
+
+ 
+  
+

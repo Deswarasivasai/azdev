@@ -1,0 +1,71 @@
+pipelines
+
+pipeline in devops is a set of process
+(automated or can be triggered manually)
+
+azure pipeline is a cloud service that you can use
+to automatically build and test your code project
+
+process in pipeline
+
+we can increase or decrease the steps for pipeline
+
+repo--build----code coverage ---test--- deploy
+
+azure devops work with any programming language and any platform
+ex>.net python java etc
+
+source code:
+your project code must be in vcs
+
+azure pipelines integrates with
+github
+github enterprises
+azure repos git and TFVC
+bitbucket and subversion (SVN)
+
+deployment target
+
+it can be used to deploy your code on multiple targets
+ex:
+container registries
+vm
+azure service
+any cloud target
+any on-promises
+
+pipeline pricing
+
+public repo--- always free
+private repo--- 30 hrs free every month
+
+ci&cd in pipeline
+
+ci--- is used to automate tests and build for the projects
+it is used to find bugs or other build issue in early phase
+
+cd--- cd is used to automatically deploy and test code in multiple states
+(enviroments like dev,qa,staging etc) to maintain the quality
+
+cicd triggered
+
+manually---- anytime you can run the ci,cd pipeline to build and test your code
+
+automatically---
+   on each commit
+on a fix interval
+at a paticular time
+
+
+build pipeline using classic editor
+
+
+creating a build pipeline without create yaml
+ 
+
+
+
+
+
+
+

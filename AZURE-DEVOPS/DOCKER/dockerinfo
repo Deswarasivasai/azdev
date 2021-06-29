@@ -1,0 +1,143 @@
+docker
+
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+
+https://stackoverflow.com/questions/52197246/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate
+
+
+https://stackoverflow.com/questions/44785585/docker-how-to-delete-all-local-docker-images
+
+https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/
+
+https://www.digitalocean.com/community/tutorials/how-to-use-node-js-modules-with-npm-and-package-json
+
+
+
+
+dockerfile 
+
+app ---- using the dockerfile--- containerizedapplication
+
+docker pull jenkins ---- jenkins download 
+docker run -p 8080:8080 jenkins --- loacalhost:8080
+
+application --  differ-- liunx -- windowns-- docker jenkins
+
+nodejs --- 
+
+dockerfile 
+
+
+normal application--- containerizedapplication 
+
+instructions in dockerfile
+
+FROM ----- Baseimage ---ubuntu/alopine 
+RUN---- sudo apt install nodejs 
+ADD---- copy the files source to desit
+COPY---- sourcrt to des
+WORKDIR---- create application locat
+VOLUME----- storage is in volumes
+CMD----- execution of the procees --- it cant be override ---
+ENTRYPOINT--- it can be overide 
+EXPOSE---- 8080---jenkins
+HELEATHCHECK--- container
+ENV--- environment variiable 
+
+editor--- vim /nano /gedit 
+
+app--- Dockerfile-- containerizedapplication
+
+vim Dockerfile==== instrctions set up --- 
+expose 8080
+
+current dockerfile---- docker build -t mynodejs . or docker build -t mynodejs dockerfilepath 
+
+docker build -------- images create 
+docker images ---  check the images
+docker run -it mynodejs
+docker run -i -t -p 8082:8081 mynodejs 
+
+ mulitple containers can run on your host machine
+ your laptop has only certain ports available
+ confilct when same port on the host
+  
+
+-p hostport:containerport
+
+git add --ignore-errors --force .
+
+
+dockerfile and usage ---------
+https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
+https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+https://betterprogramming.pub/what-goes-into-a-dockerfile-ff0ace591060
+https://moizalimoomin.medium.com/how-to-setup-python3-on-ubuntu-using-docker-container-8835e10fd56f ---- python
+https://cloudskills.io/blog/python-container ------- pythonfile for dockerfile
+https://hasura.io/blog/how-to-write-dockerfiles-for-python-web-apps-6d173842ae1d/ ---- multistage dockerfiles
+
+
+==== docker image --- 
+docker build -t mynodejs . 
+
+move to the registry --- docker build -t [username]/[imagebame] .
+
+=============docker files differences for creating dockerized python =========================
+
+
+FROM ubuntu:16.04
+RUN apt-get update -y && \
+    apt-get install -y python3-pip python3-dev
+COPY ./requirements.txt /requirements.txt
+WORKDIR /
+RUN pip3 install -r requirements.txt
+COPY . /
+# ENTRYPOINT [ "python3" ]
+CMD [ "python3" ,"app/app.py" ]
+
+
+
+
+
+FROM python:3.7-alpine
+
+COPY ./requirements.txt /requirements.txt
+WORKDIR /
+RUN pip3 install -r requirements.txt
+COPY . /
+# ENTRYPOINT [ "python3" ]
+CMD [ "python3" ,"app/app.py" ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

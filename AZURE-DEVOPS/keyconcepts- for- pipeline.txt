@@ -1,0 +1,91 @@
+build pipeline
+
+create new buildpipeline
+build project automatically
+get success/error notification on email
+view build logs to fix the error
+
+
+https://docs.microsoft.com/en-us/azure/devops-project/azure-devops-project-python
+
+##[error]No hosted parallelism has been purchased or granted. To request a free parallelism grant, please fill out the following form https://aka.ms/azpipelines-parallelism-request
+https://www.compilemode.com/2021/04/microsoft-azure-restricted-free-use-of-azure-devops-pipelines.html
+
+
+keyconcepts of azure pipeline
+
+agent:
+
+ when you build or deployment runs, the system begins one or more jobs.
+ An agent is installable software that runs one job at a time
+ 
+ To build your code or deploy your software using azure pipelines,
+ you need at least one agent
+ 
+ azure devops we can use 2 types of agent
+ microsoft-hosted agent
+ self-hosted agent
+ 
+ approvals:
+ 
+ are a set of validations which are required before a deployment can be performed
+ 
+ ex: getting permission from the someone in a team 
+ before the deployment on production
+ 
+ 
+ Artifacts
+ 
+ is a collection of files or packages which are created by a build runs
+ these artifacts are then made available for the next task: i.c deployment
+ 
+ 
+ app----artifact---deployment
+ 
+ 
+ Environment
+ 
+is the place where we deploy our application
+is a collection of resources
+ex: vms container ,webapp etc
+
+A release pipleine can deply the code on one or more VMs(Environments)
+aftert build pipleing is completed
+
+Job
+
+a job represents an exeution boundary of set of steps
+all of the steps run together on the same agent
+ex: you might build two configurations- x86 and x64.
+in this case, you have one build stage and two jobs
+
+
+Run
+
+one execution of a pipleine(build or release) is known as run
+
+Stage
+
+is used to mark serpartion of concerns
+ex: create a build for qa, staging, production etc
+each stage contains one or more jobs
+stage is very important in adding an extra level
+of validation before your code goes to production
+
+Triger
+
+is a setup that tells the pipeline when to run
+we can configure a pipeline when-
+    new push in repo
+	at scheduled time
+	upon completion of another build
+
+
+
+
+
+
+
+ 
+ 
+ 

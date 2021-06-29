@@ -1,0 +1,73 @@
+url ------------https://www.decodingdevops.com/how-to-git-clone-git-clone-remote-repository/
+
+git ------------------ github--------- repositories 1--- repositories n
+
+git remote add origin url(repositories n)
+
+git-------- bitbucket----- repositories 1
+
+git ----- azure repo------- repositories 1
+
+configurations------ git config --global user.name&email githubcredentials
+add the repo to local---- git remote add origin repositoriesurl
+check the repositoriesurl-------- git remote -v ---- (https or ssh)
+initia--------- git init
+file create----- touch filename
+data add in file---- cat > filename or vim filename
+check the status---- git status
+add the files ---- git add . or git add filename
+save the files ---- git commit -m "message"
+local to remote ---push the code --- git push  or new branch --- git push -u origin branchname or git push --set-upstream origin branchname
+remote to local code----- git pull
+create branch ----- git branch branchname
+switch the branch--- git checkout branchname
+new repo into local---- git clone repositoriesurl
+updated repo from existing----- git pull
+delete the branch--- git branche -d branchname
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+
+dev--- test--- same files --- if i did any modifications the samefile ---- conflicts 
+file--- ajay devops--- suresh--- sai--- aj devops 
+
+master---dev---test--feature
+
+test branch am working--- n files --- i want to move into the dev ---- git merge
+
+total modification ---- we can use the rebase---- git rebase--- mostly not use the rebase in companies
+
+middle of the work --- we can disconnect and after we again reconnected--- git stash 
+
+number of commits ----- git logs 
+
+perticular commit id i want to check---- git cherry-pick commmitid---n
+
+git fetch------ git pull + git merge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+To run an application with Docker, we have to build a container with all of the dependencies used in 
+it - which in our case is only Flask. To do this, we'll include a requirements.txt file containing the
+ required dependencies and create a 
+Dockerfile that relies on the file to build an image.
+
+Preparing the Application
+
+Including dependencies in the requirements.txt file
+
+Flask==1.0.2
+
+FROM ubuntu:16.04
+
+MAINTAINER Madhuri Koushik "madhuri@koushik.com"
+
+RUN apt-get update -y && \
+    apt-get install -y python3-pip python3-dev
+
+COPY ./requirements.txt /requirements.txt
+
+WORKDIR /
+
+RUN pip3 install -r requirements.txt
+
+COPY . /
+
+ENTRYPOINT [ "python3" ]
+
+CMD [ "app/app.py" ]
+
+
+build docker image
+docker build -t docker-flask:latest .
+
+To achieve this, we start the Docker container with volume-mapping and port-forwarding options:
+
+docker run --name flaskapp -v$PWD/app:/app -p5000:5000 docker-flask:latest
+
+Starts a container based on the docker-flask image we built previously.
+This container's name is set to flaskapp. Without the --name option, Docker chooses an arbitrary (and a very interesting) name for the container. Specifying a name explicitly will help us in locating the container (for stopping etc.,.)
+The -v option mounts the app folder on the host to the container.
+The -p option maps the port on the container to the host.
+
+Now the application can be accessed at http://localhost:5000 or http://0.0.0.0:5000/:
+
+
+If we make changes to the application when the container is running and save the file, 
+Flask detects the changes and restarts the app:
+
+
+To stop the container, press Ctrl-C and remove the container by running 
+docker rm flaskapp.
+
+
+
