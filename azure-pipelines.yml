@@ -27,10 +27,5 @@ steps:
   inputs:
     containerRegistry: 'Dockerconnect'
     repository: 'nodetest'
-    command: 'build'
+    command: 'build/push'
     Dockerfile: '**/Dockerfile'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Dockerconnect'
-    repository: 'sivasaichintala023 / testing'
-    command: 'push'
